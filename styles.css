@@ -795,3 +795,66 @@ footer {
     padding: 3rem 1.5rem 1.5rem;
   }
 }
+
+/* Ajuste dos botões nas seções */
+.section-content {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-content button {
+  margin: 30px auto 0;
+  display: block;
+}
+
+.performance .section-content,
+.exterior .section-content,
+.interior .section-content,
+.digital-highlights .section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digital-highlights {
+  text-align: center;
+}
+
+.digital-highlights .highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.digital-highlights button {
+  margin: 20px auto 0;
+}
+
+.financing {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.financing button {
+  margin: 30px auto 0;
+}
+
+.faq {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .section-content {
+    padding: 40px 20px;
+  }
+
+  .section-content button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
