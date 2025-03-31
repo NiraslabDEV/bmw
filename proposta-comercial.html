@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Pages Automotivas Premium - Proposta Comercial</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #0066b1;
+        --secondary-color: #333;
+        --accent-color: #ff4d4d;
+        --light-gray: #f5f5f5;
+        --success-color: #4caf50;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: var(--secondary-color);
+        overflow-x: hidden;
+      }
+
+      .hero-proposta {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url("baner1.png");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-proposta::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          45deg,
+          var(--primary-color) 0%,
+          transparent 100%
+        );
+        opacity: 0.3;
+      }
+
+      .hero-proposta h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+
+      .hero-proposta p {
+        font-size: 1.3em;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        position: relative;
+      }
+
+      .preco-destaque {
+        background: linear-gradient(135deg, var(--primary-color), #004d8c);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        display: inline-block;
+        margin: 20px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .preco-destaque::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        transform: rotate(45deg);
+      }
+
+      .preco-destaque .valor {
+        font-size: 4em;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .beneficios {
+        padding: 100px 20px;
+        background: var(--light-gray);
+        position: relative;
+      }
+
+      .beneficios::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #fff 0%, transparent 100%);
+        opacity: 0.5;
+      }
+
+      .beneficios-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        position: relative;
+      }
+
+      .beneficio-item {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .beneficio-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .beneficio-item i {
+        font-size: 3em;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+        transition: transform 0.3s ease;
+      }
+
+      .beneficio-item:hover i {
+        transform: scale(1.1);
+      }
+
+      .pacotes {
+        padding: 100px 20px;
+        background: linear-gradient(135deg, #fff 0%, var(--light-gray) 100%);
+      }
+
+      .pacotes-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .pacote {
+        border: none;
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .pacote:hover {
+        transform: translateY(-10px);
+      }
+
+      .pacote.destaque {
+        background: linear-gradient(135deg, var(--primary-color), #004d8c);
+        color: white;
+        transform: scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 102, 177, 0.3);
+      }
+
+      .pacote ul {
+        list-style: none;
+        padding: 20px 0;
+        margin: 20px 0;
+      }
+
+      .pacote ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .pacote.destaque ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .cta-button {
+        background: linear-gradient(135deg, var(--accent-color), #ff3333);
+        color: white;
+        padding: 20px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 30px;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(255, 77, 77, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(255, 77, 77, 0.4);
+        background: linear-gradient(135deg, #ff3333, var(--accent-color));
+      }
+
+      .garantias {
+        padding: 80px 20px;
+        background: var(--light-gray);
+        text-align: center;
+      }
+
+      .garantias-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .garantia-item {
+        margin: 30px 0;
+      }
+
+      .garantia-item i {
+        font-size: 2em;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+
+      .analytics-section {
+        padding: 80px 20px;
+        background: white;
+        text-align: center;
+      }
+
+      .analytics-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .analytics-item {
+        padding: 40px;
+        background: var(--light-gray);
+        border-radius: 20px;
+        text-align: left;
+      }
+
+      .analytics-item h3 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .analytics-item ul {
+        list-style: none;
+      }
+
+      .analytics-item ul li {
+        margin: 15px 0;
+        padding-left: 30px;
+        position: relative;
+      }
+
+      .analytics-item ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--success-color);
+        font-weight: bold;
+      }
+
+      @media (max-width: 768px) {
+        .hero-proposta h1 {
+          font-size: 2.5em;
+        }
+
+        .beneficios-container,
+        .pacotes-container,
+        .analytics-container {
+          grid-template-columns: 1fr;
+        }
+
+        .pacote.destaque {
+          transform: none;
+        }
+
+        .preco-destaque .valor {
+          font-size: 3em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero-proposta">
+      <h1>Landing Pages Automotivas Premium</h1>
+      <p>
+        Aumente suas vendas com páginas profissionais otimizadas para conversão
+      </p>
+      <div class="preco-destaque">
+        <span class="valor">R$ 500</span>
+        <p>por página - Pagamento único</p>
+      </div>
+      <a
+        href="https://wa.me/11941431850?text=Olá! Tenho interesse nas landing pages automotivas"
+        class="cta-button"
+      >
+        QUERO VENDER MAIS CARROS
+      </a>
+    </section>
+
+    <section class="beneficios">
+      <div class="beneficios-container">
+        <div class="beneficio-item">
+          <i class="fas fa-search"></i>
+          <h3>Otimizado para Google Ads</h3>
+          <p>
+            Páginas desenvolvidas pensando em máxima conversão para suas
+            campanhas patrocinadas
+          </p>
+        </div>
+        <div class="beneficio-item">
+          <i class="fas fa-whatsapp"></i>
+          <h3>Integração com WhatsApp</h3>
+          <p>
+            Sistema inteligente de captação e qualificação de leads direto para
+            seu WhatsApp
+          </p>
+        </div>
+        <div class="beneficio-item">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>100% Responsivo</h3>
+          <p>
+            Design adaptativo para todos os dispositivos, garantindo a melhor
+            experiência
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pacotes">
+      <div class="pacotes-container">
+        <div class="pacote">
+          <h3>Pacote Básico</h3>
+          <p class="preco">R$ 500</p>
+          <ul>
+            <li>1 Landing Page</li>
+            <li>Formulário de Captação</li>
+            <li>Integração WhatsApp</li>
+            <li>Otimização SEO Básica</li>
+            <li>Google Analytics</li>
+          </ul>
+          <a
+            href="https://wa.me/11941431850?text=Olá! Tenho interesse no Pacote Básico de Landing Page"
+            class="cta-button"
+            >Contratar</a
+          >
+        </div>
+        <div class="pacote destaque">
+          <h3>Pacote Recomendado</h3>
+          <p class="preco">R$ 1.200</p>
+          <ul>
+            <li>3 Landing Pages (R$ 400/cada)</li>
+            <li>Sistema Avançado de Captação</li>
+            <li>Integração WhatsApp Premium</li>
+            <li>Otimização SEO Completa</li>
+            <li>Google Analytics + Facebook Pixel</li>
+            <li>Relatórios de Conversão</li>
+            <li>Consultoria em Ads (2h)</li>
+          </ul>
+          <a
+            href="https://wa.me/11941431850?text=Olá! Tenho interesse no Pacote Recomendado de Landing Pages"
+            class="cta-button"
+            >Contratar</a
+          >
+        </div>
+        <div class="pacote">
+          <h3>Pacote Revenda</h3>
+          <p class="preco">R$ 2.450</p>
+          <ul>
+            <li>7 Landing Pages (R$ 350/cada)</li>
+            <li>Personalização Completa</li>
+            <li>Suporte Premium 30 dias</li>
+            <li>Consultoria em Ads (4h)</li>
+            <li>Domínio Grátis (1 ano)</li>
+            <li>Instalação e Setup de Tags em Todas as Páginas</li>
+            <li>Configuração Avançada de Eventos GA4 e Meta</li>
+            <li>Pixel e Conversões Configuradas</li>
+          </ul>
+          <a
+            href="https://wa.me/11941431850?text=Olá! Tenho interesse no Pacote Revenda de Landing Pages"
+            class="cta-button"
+            >Contratar</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="garantias">
+      <div class="garantias-container">
+        <h2>Nossas Garantias</h2>
+        <div class="garantia-item">
+          <i class="fas fa-check-circle"></i>
+          <h3>Satisfação Garantida</h3>
+          <p>7 dias de garantia para testar e aprovar sua landing page</p>
+        </div>
+        <div class="garantia-item">
+          <i class="fas fa-lock"></i>
+          <h3>Seu Para Sempre</h3>
+          <p>Pagamento único - a página será sua permanentemente</p>
+        </div>
+        <div class="garantia-item">
+          <i class="fas fa-sync"></i>
+          <h3>Atualizações Gratuitas</h3>
+          <p>Atualizações de segurança e correções incluídas</p>
+        </div>
+      </div>
+      <a
+        href="https://wa.me/11941431850?text=Olá! Quero saber mais sobre as landing pages automotivas"
+        class="cta-button"
+      >
+        FALAR COM ESPECIALISTA
+      </a>
+    </section>
+
+    <section class="analytics-section">
+      <h2>Monitoramento Completo de Resultados</h2>
+      <div class="analytics-container">
+        <div class="analytics-item">
+          <h3><i class="fab fa-google"></i> Google Analytics 4</h3>
+          <ul>
+            <li>Acompanhamento em tempo real de visitantes</li>
+            <li>Relatórios detalhados de conversão</li>
+            <li>Análise de comportamento do usuário</li>
+            <li>Métricas de engajamento</li>
+            <li>Integração com Google Ads</li>
+            <li>Funil de conversão detalhado</li>
+          </ul>
+        </div>
+        <div class="analytics-item">
+          <h3><i class="fab fa-facebook"></i> Facebook Pixel</h3>
+          <ul>
+            <li>Rastreamento de eventos personalizados</li>
+            <li>Remarketing inteligente</li>
+            <li>Otimização de campanhas</li>
+            <li>Análise de ROI em tempo real</li>
+            <li>Segmentação avançada de público</li>
+            <li>Conversões detalhadas por campanha</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top: 40px; color: var(--secondary-color)">
+        Todo o monitoramento é configurado em sua conta, mantendo você no
+        controle total dos dados
+      </p>
+    </section>
+  </body>
+</html>
