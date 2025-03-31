@@ -1,0 +1,797 @@
+/* Reset e estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "BMW Type Next", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header e Navegação */
+header {
+  position: fixed;
+  width: 100%;
+  top: 40px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #0066b1;
+}
+
+/* Banner Sections */
+.full-banner {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 4rem;
+  position: relative;
+}
+
+.full-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.section-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  position: relative;
+  margin-top: 100px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Botões */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #0066b1;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #005291;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Performance Section */
+.performance .section-content {
+  text-align: left;
+}
+
+.performance h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.spec-item {
+  text-align: center;
+  color: #fff;
+}
+
+.spec-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0066b1;
+}
+
+.spec-item p {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Digital Highlights Section */
+.digital-highlights {
+  padding: 4rem;
+  background-color: #111;
+}
+
+.digital-highlights h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.highlight-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.highlight-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight-item .btn-primary {
+  margin-top: 1.5rem;
+}
+
+/* Financing Section */
+.financing {
+  padding: 4rem;
+  text-align: center;
+  background-color: #111;
+}
+
+.financing h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.financing p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  color: #000;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 2rem;
+}
+
+.radio-group label {
+  margin-left: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero,
+  .full-banner {
+    padding: 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-content {
+    max-width: 100%;
+  }
+}
+
+/* M Distinctive Section */
+.m-distinctive {
+  padding: 4rem;
+  background-color: #000;
+}
+
+.m-distinctive .content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.m-distinctive h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Exterior Section */
+.exterior {
+  padding: 4rem;
+  background-color: #111;
+}
+
+.exterior h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  text-align: center;
+}
+
+.feature-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Interior Section */
+.interior {
+  padding: 4rem;
+  background-color: #000;
+}
+
+.interior h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.interior-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.interior-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.interior-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.interior-features .feature {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.interior-features h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 4rem;
+  background-color: #000;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.faq-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #0066b1;
+}
+
+/* Pronta Entrega Banner */
+.pronta-entrega-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0066b1;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+  height: 40px;
+}
+
+.pronta-entrega-tag {
+  background-color: #0066b1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Price and Specs CTA Section */
+.price-specs-cta {
+  background-color: #111;
+  padding: 4rem 2rem;
+}
+
+.price-specs-cta .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pronta-entrega-highlight {
+  background-color: #0066b1;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+
+.pronta-entrega-highlight i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pronta-entrega-highlight h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.price-block {
+  margin-bottom: 3rem;
+}
+
+.price-block h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.price-tag {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #0066b1;
+  margin-bottom: 0.5rem;
+}
+
+.price-note {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.specs-highlight {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.specs-highlight h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.specs-highlight ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.specs-highlight li {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}
+
+.btn-large {
+  padding: 1.5rem 3rem;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.btn-subtitle {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
+/* Modal Updates */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pronta-entrega-badge {
+  background-color: #0066b1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.vehicle-summary {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.vehicle-summary h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.price-confirmation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.price-confirmation strong {
+  color: #0066b1;
+  font-size: 1.4rem;
+}
+
+.confirmation-text {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .specs-highlight ul {
+    grid-template-columns: 1fr;
+  }
+
+  .price-tag {
+    font-size: 2.5rem;
+  }
+
+  .btn-large {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .pronta-entrega-banner {
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #111;
+  padding: 4rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.footer-logo {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.footer-logo span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-column h4 {
+  color: #0066b1;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  color: #999;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #0066b1;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-logo {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+}
