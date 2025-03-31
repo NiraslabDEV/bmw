@@ -6,10 +6,106 @@
   font-family: "BMW Type Next", Arial, Helvetica, sans-serif;
 }
 
+html,
 body {
+  width: 100%;
+  overflow-x: hidden;
   background-color: #000;
   color: #fff;
   line-height: 1.6;
+}
+
+/* Ajustes para remover barras laterais */
+.section,
+.hero,
+.full-banner,
+.performance,
+.digital-highlights,
+.m-distinctive,
+.exterior,
+.interior,
+.financing,
+.faq,
+.price-specs-cta,
+footer {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-content,
+.hero-content,
+.nav-container,
+.highlights-grid,
+.feature-grid,
+.interior-content,
+.faq-container,
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .hero,
+  .full-banner {
+    padding: 0;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .section-content,
+  .nav-container,
+  .highlights-grid,
+  .feature-grid,
+  .interior-content,
+  .faq-container,
+  .footer-container {
+    padding: 0 15px;
+  }
+
+  .specs-grid,
+  .highlights-grid,
+  .feature-grid {
+    margin: 0;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-content,
+  .nav-container,
+  .highlights-grid,
+  .feature-grid,
+  .interior-content,
+  .faq-container,
+  .footer-container {
+    padding: 0 10px;
+  }
+
+  .specs-grid,
+  .highlights-grid,
+  .feature-grid {
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero h3 {
+    font-size: 2rem;
+  }
 }
 
 /* Header e Navegação */
@@ -330,34 +426,6 @@ header {
   margin-left: 0.5rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .hero,
-  .full-banner {
-    padding: 0 2rem;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .specs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .highlights-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-content {
-    max-width: 100%;
-  }
-}
-
 /* M Distinctive Section */
 .m-distinctive {
   padding: 4rem;
@@ -662,29 +730,6 @@ header {
   font-size: 0.9rem;
   color: #666;
   text-align: center;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .specs-highlight ul {
-    grid-template-columns: 1fr;
-  }
-
-  .price-tag {
-    font-size: 2.5rem;
-  }
-
-  .btn-large {
-    width: 100%;
-    padding: 1.2rem;
-  }
-
-  .pronta-entrega-banner {
-    flex-direction: column;
-    gap: 0.3rem;
-    padding: 0.3rem;
-    font-size: 0.9rem;
-  }
 }
 
 /* Footer Styles */
